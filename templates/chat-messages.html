@@ -1,0 +1,11 @@
+{% for message in chat_messages %}
+    {% if message.user == "user" %}
+        <div class="user-message">
+            <p>{{ message.message }}</p>
+        </div>
+    {% else %}
+        <div class="bot-message">
+            <p>{{ message.message }}</p>
+        </div>
+    {% endif %}
+{% endfor %}
